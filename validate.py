@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -12,11 +13,12 @@ browser = webdriver.Chrome(options=chrome_options)
 
 # get all file paths
 paths = []
-import os
+
+
 for root, dirs, files in os.walk(".", topdown=False):
-   for name in files:
+    for name in files:
         paths.append(os.path.join(root, name))
-   for name in dirs:
+    for name in dirs:
         paths.append(os.path.join(root, name))
 
 tabs_open = 1
@@ -25,7 +27,7 @@ tabs_open = 1
 for path in paths:
     if not (path.endswith(".html") or path.endswith(".css")):
         continue
-    
+
     # open a new tab and switch to it
     browser.execute_script("window.open('');")
     tabs_open += 1
@@ -43,7 +45,7 @@ for path in paths:
     check_button.click()
 
     # check if the uploaded file passed the validation
-    if "<div id=\"results\"><p class=\"success\">" in browser.page_source:
+    if '<div id="results"><p class="success">' in browser.page_source:
         print(path, "passed")
     else:
         print(path, "failed")
