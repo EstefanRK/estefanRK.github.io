@@ -1,0 +1,1 @@
+- [Quantum Computing](https://www.freepik.com/free-photo/smart-microchip-background-motherboard-closeup-technology-remix_15606887.htm#query=quantum%20computing&position=34&from_view=search&track=ais&uuid=b6c2890d-3978-45a4-ac4e-4b2c408ac68f)
